@@ -81,12 +81,35 @@ section{
     opacity: 100%;
  }
 
- input{
-    display: block;
-    width: 16rem;
-    background-color: hsl(229, 57%, 11%);
+.progress{
+   height: 18px;
+   width: 97%;
+   background-color: hsl(229, 57%, 11%);
+   border-radius: 30px;
+   position: relative;
+}
+
+.progress::before {
+   content: "";
+   position: absolute;
+   width: 15px;
+   height: 15px;
+   border-radius: 50%;
+   background-color: hsl(0, 0%, 95%);
+   right: 77px;
+   top: 2px;
+   z-index: 1;
+}
+
+.progress-span{
+   width: 70%;
+   background-image: linear-gradient(to right, hsl(6, 100%, 80%),hsl(335, 100%, 65%));
+   position: absolute;
+   height: 100%;
+   border-radius: 10px;
+}
     
- }
+
 
  .span1, .span2 {
     display: inline-block;
@@ -95,7 +118,7 @@ section{
  }
 
  .span2{
-    margin-left: 10.7rem;
+    margin-left: 10rem;
  }
 
  .balance{
@@ -150,7 +173,25 @@ section{
       right: 5px
    }
 
+   /* .content::after {
+      content: "";
+      position: absolute;
+      border-width: 25px;
+      border-style: solid;
+      border-color: hsl(243, 100%, 93%);
+      right: 7px;
+      top: -1px;
+   } */
+
+   .image-div{
+      margin-left: -63px;
+   }
+
+   .progress::before{
+      right: 58px;
+   }
+
    .content{
-      margin-top: 77px;
+      margin-top: 25px;
    }
  }
